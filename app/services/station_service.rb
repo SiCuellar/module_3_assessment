@@ -1,14 +1,14 @@
 class StationService
 
   def get_stations(zip)
-    get_json("/v1.json?fuel_type=E85,ELEC&state=CA&limit=2&api_key=#{ENV["API_KEY"]}&format=JSON")
+    get_json("v1.json?fuel_type=LPG,ELEC&location=80203&limit=10&api_key=#{ENV["API_KEY"]}&radius=6")[:fuel_stations]
   end
 
   private
 
   def get_json(path)
     response = conn.get(path)
-    binding.pry
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def conn
