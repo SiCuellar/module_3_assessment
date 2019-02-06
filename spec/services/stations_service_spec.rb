@@ -6,8 +6,10 @@ describe " Station Service  " do
     stations_data = service.get_stations(zip)
 
     expect(service).to be_an_instance_of(StationService)
-    binding.pry
-    expect(stations_data).to be_a(Hash)
-    expect(stations_data).to have_key(:fuel_stations)
+    expect(stations_data).to be_a(Array)
+    expect(stations_data[0]).to have_key(:fuel_type_code)
+    expect(stations_data[0]).to have_key(:station_name)
+    expect(stations_data[0]).to have_key(:station_phone)
+    expect(stations_data.count).to eq(10)
   end
 end
