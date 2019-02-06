@@ -1,0 +1,9 @@
+<h2> Stations </h2>
+
+<% @stations_facade.stations.each do |station| %>
+<%= station.name %>
+<%= station.address %>
+<%= station.fuel_type %>
+<%= station.distance %>
+<%= station.atime %>
+<% end %>
