@@ -1,4 +1,4 @@
-class Station < ApplicationRecord
+class Station 
   attr_reader :name,
               :address,
               :fuel_type,

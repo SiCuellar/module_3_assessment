@@ -1,8 +1,10 @@
 <h2> Stations </h2>
 
 <% @stations_facade.stations.each do |station| %>
-<%= station.name %>
-<%= station.address %>
-<%= station.fuel_type %>
-<%= station.atime %>
+Station Name: <%= station.name %> <br>
+Station Address: <%= station.address %><br>
+Station Fuel Type: <%= station.fuel_type %><br>
+Station Access Time: <%= station.atime %><br>
+<br>
+<br>
 <% end %>

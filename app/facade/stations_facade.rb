@@ -4,9 +4,8 @@ class StationsFacade
   end
 
   def stations
-    @stations_data.each do |station_data|
+    @stations_data.map do |station_data|
       Station.new(station_data)
-      binding.pry
     end
   end
 end
