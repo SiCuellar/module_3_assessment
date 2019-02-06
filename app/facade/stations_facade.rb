@@ -1,9 +1,12 @@
 class StationsFacade
   def initialize(zip)
-    @zip = zip
+    @stations_data = StationService.new.get_stations(zip)
+
   end
 
-  def service
-    
+  def stations
+    binding.pry
   end
+
+
 end

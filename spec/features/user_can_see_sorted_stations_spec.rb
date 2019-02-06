@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "user" do
   it "user can see stations by zip " do
+    
     # As a user
     visit(root_path)
     # When I visit "/"
